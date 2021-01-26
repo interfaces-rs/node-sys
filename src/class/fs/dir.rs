@@ -1,5 +1,5 @@
-use crate::{class::fs::Dirent, interface::AsyncIterator};
-use js_sys::{Function, JsString, Object, Promise};
+use crate::class::fs::Dirent;
+use js_sys::{AsyncIterator, Function, JsString, Object, Promise};
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen(module = "fs")]

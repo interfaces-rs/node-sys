@@ -1,7 +1,8 @@
 use crate::{
     class::EventEmitter,
-    interface::{AsyncIterator, PipeOptions, WritableStream},
+    interface::{PipeOptions, WritableStream},
 };
+use js_sys::AsyncIterator;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
