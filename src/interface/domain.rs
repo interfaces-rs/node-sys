@@ -7,10 +7,10 @@ extern {
     #[wasm_bindgen(extends = EventEmitter)]
     pub type Domain;
 
-    #[wasm_bindgen(method, js_name = "add")]
+    #[wasm_bindgen(method, js_name = add)]
     pub fn add_with_emitter(this: &Domain, emitter: &EventEmitter);
 
-    #[wasm_bindgen(method, js_name = "add")]
+    #[wasm_bindgen(method, js_name = add)]
     pub fn add_with_timer(this: &Domain, timer: &Timer);
 
     #[wasm_bindgen(method)]

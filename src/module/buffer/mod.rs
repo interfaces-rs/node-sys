@@ -11,7 +11,7 @@ extern {
 
     pub static constants: BufferConstants;
 
-    #[wasm_bindgen(js_name = "kMaxLength")]
+    #[wasm_bindgen(js_name = kMaxLength)]
     pub static k_max_length: f64;
 
     pub fn transcode(source: &Uint8Array, from_enc: &JsString, to_enc: &JsString) -> Buffer;

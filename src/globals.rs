@@ -18,7 +18,7 @@ extern {
 
     // pub static process: Object; // FIXME: name collision
 
-    #[wasm_bindgen(js_name = "queueMicrotask")]
+    #[wasm_bindgen(js_name = queueMicrotask)]
     pub fn queue_microtask(callback: &Function);
 
     pub fn require(id: &JsString) -> JsValue;

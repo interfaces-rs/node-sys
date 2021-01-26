@@ -3,7 +3,7 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen(module = "repl")]
 extern {
-    #[wasm_bindgen(js_name = "REPLServer", extends = Object)]
+    #[wasm_bindgen(js_name = REPLServer, extends = Object)]
     #[derive(Clone, Debug)]
     pub type ReplServer;
 }

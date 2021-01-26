@@ -15,10 +15,10 @@ extern {
     #[wasm_bindgen(method)]
     fn end(this: &WritableStream, cb: Option<&Function>);
 
-    #[wasm_bindgen(method, js_name = "end")]
+    #[wasm_bindgen(method, js_name = end)]
     fn end_with_data(this: &WritableStream, buffer: &Uint8Array, cb: Option<&Function>);
 
-    #[wasm_bindgen(method, js_name = "end")]
+    #[wasm_bindgen(method, js_name = end)]
     fn end_with_string(this: &WritableStream, string: &JsString, encoding: Option<&JsString>, cb: Option<&Function>);
 
     #[wasm_bindgen(method)]

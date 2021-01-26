@@ -3,7 +3,7 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen(module = "crypto")]
 extern {
-    #[wasm_bindgen(extends = Object, js_name = "ECDH")]
+    #[wasm_bindgen(extends = Object, js_name = ECDH)]
     #[derive(Clone, Debug)]
     pub type Ecdh;
 
@@ -24,7 +24,7 @@ extern {
     // Instance Methods //
     //******************//
 
-    #[wasm_bindgen(method, js_name = "computeSecret")]
+    #[wasm_bindgen(method, js_name = computeSecret)]
     pub fn compute_secret(
         this: &Ecdh,
         other_public_key: &JsValue,
@@ -32,15 +32,15 @@ extern {
         output_encoding: Option<&str>,
     ) -> JsValue;
 
-    #[wasm_bindgen(method, js_name = "generateKeys")]
+    #[wasm_bindgen(method, js_name = generateKeys)]
     pub fn generate_keys(this: &Ecdh, encoding: Option<&str>, format: Option<&str>) -> JsValue;
 
-    #[wasm_bindgen(method, js_name = "getPrivateKey")]
+    #[wasm_bindgen(method, js_name = getPrivateKey)]
     pub fn get_private_key(this: &Ecdh, encoding: Option<&str>) -> JsValue;
 
-    #[wasm_bindgen(method, js_name = "getPublicKey")]
+    #[wasm_bindgen(method, js_name = getPublicKey)]
     pub fn get_public_key(this: &Ecdh, encoding: Option<&str>, format: Option<&str>) -> JsValue;
 
-    #[wasm_bindgen(method, js_name = "setPrivateKey")]
+    #[wasm_bindgen(method, js_name = setPrivateKey)]
     pub fn set_private_key(this: &Ecdh, private_key: &JsValue, encoding: Option<&str>);
 }

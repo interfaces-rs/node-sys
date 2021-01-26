@@ -10,25 +10,25 @@ extern {
     #[wasm_bindgen(constructor)]
     pub fn new() -> EventEmitter;
 
-    #[wasm_bindgen(method, getter, js_name = "defaultMaxListeners")]
+    #[wasm_bindgen(method, getter, js_name = defaultMaxListeners)]
     pub fn default_max_listeners(this: &EventEmitter) -> f64;
 
-    #[wasm_bindgen(method, setter, js_name = "defaultMaxListeners")]
+    #[wasm_bindgen(method, setter, js_name = defaultMaxListeners)]
     pub fn set_default_max_listeners(this: &EventEmitter, value: f64);
 
-    #[wasm_bindgen(method, js_name = "addListener")]
+    #[wasm_bindgen(method, js_name = addListener)]
     pub fn add_listener(this: &EventEmitter, event_name: &str, listener: &Function) -> EventEmitter;
 
     #[wasm_bindgen(method, variadic)]
     pub fn emit(this: &EventEmitter, event_name: &str, args: Box<[JsValue]>) -> bool;
 
-    #[wasm_bindgen(method, js_name = "eventNames")]
+    #[wasm_bindgen(method, js_name = eventNames)]
     pub fn event_names(this: &EventEmitter) -> Box<[JsValue]>;
 
-    #[wasm_bindgen(method, js_name = "getMaxListeners")]
+    #[wasm_bindgen(method, js_name = getMaxListeners)]
     pub fn get_max_listeners(this: &EventEmitter);
 
-    #[wasm_bindgen(method, js_name = "listenerCount")]
+    #[wasm_bindgen(method, js_name = listenerCount)]
     pub fn listener_count(this: &EventEmitter) -> f64;
 
     #[wasm_bindgen(method)]
@@ -37,27 +37,27 @@ extern {
     #[wasm_bindgen(method)]
     pub fn off(this: &EventEmitter, event_name: &str, listener: &Function) -> EventEmitter;
 
-    #[wasm_bindgen(method, js_name = "on")]
+    #[wasm_bindgen(method, js_name = on)]
     pub fn on(this: &EventEmitter, event_name: &str, listener: &Function) -> EventEmitter;
 
-    #[wasm_bindgen(method, js_name = "once")]
+    #[wasm_bindgen(method, js_name = once)]
     pub fn once(this: &EventEmitter, event_name: &str, listener: &Function) -> EventEmitter;
 
-    #[wasm_bindgen(method, js_name = "prependListener")]
+    #[wasm_bindgen(method, js_name = prependListener)]
     pub fn prepend_listener(this: &EventEmitter, event_name: &str, listener: &Function) -> EventEmitter;
 
-    #[wasm_bindgen(method, js_name = "prependOnceListener")]
+    #[wasm_bindgen(method, js_name = prependOnceListener)]
     pub fn prepend_once_listener(this: &EventEmitter, event_name: &str, listener: &Function) -> EventEmitter;
 
-    #[wasm_bindgen(method, js_name = "removeAllListeners")]
+    #[wasm_bindgen(method, js_name = removeAllListeners)]
     pub fn remove_all_listeners(this: &EventEmitter, event_name: Option<&str>) -> EventEmitter;
 
-    #[wasm_bindgen(method, js_name = "removeListener")]
+    #[wasm_bindgen(method, js_name = removeListener)]
     pub fn remove_listener(this: &EventEmitter, event_name: &str, listener: &Function) -> EventEmitter;
 
-    #[wasm_bindgen(method, js_name = "setMaxListeners")]
+    #[wasm_bindgen(method, js_name = setMaxListeners)]
     pub fn set_max_listeners(this: &EventEmitter, n: f64) -> EventEmitter;
 
-    #[wasm_bindgen(method, js_name = "rawListeners")]
+    #[wasm_bindgen(method, js_name = rawListeners)]
     pub fn raw_listeners(this: &EventEmitter, event_name: &str) -> Box<[JsValue]>;
 }

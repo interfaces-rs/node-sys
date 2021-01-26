@@ -9,15 +9,15 @@ use wasm_bindgen::prelude::*;
 extern {
     pub fn access(path: &JsString, mode: Option<u32>, callback: &Function);
 
-    #[wasm_bindgen(js_name = "accessSync")]
+    #[wasm_bindgen(js_name = accessSync)]
     pub fn access_sync(path: &JsString, mode: Option<u32>);
 
-    #[wasm_bindgen(js_name = "appendFile")]
+    #[wasm_bindgen(js_name = appendFile)]
     pub fn append_file(path: &JsString, data: &Buffer, options: Option<AppendFileOptions>, callback: &Function);
 
-    #[wasm_bindgen(js_name = "mkdtempSync")]
+    #[wasm_bindgen(js_name = mkdtempSync)]
     pub fn mkdtemp_sync(prefix: &JsString, options: Option<MkdtempSyncOptions>) -> JsString;
 
-    #[wasm_bindgen(js_name = "writeFileSync")]
+    #[wasm_bindgen(js_name = writeFileSync)]
     pub fn write_file_sync(file: &JsValue, data: &JsValue, options: Option<WriteFileSyncOptions>);
 }

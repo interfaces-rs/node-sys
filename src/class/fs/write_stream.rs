@@ -12,7 +12,7 @@ extern {
     // Instance Methods //
     //******************//
 
-    #[wasm_bindgen(method, getter, js_name = "bytesWritten")]
+    #[wasm_bindgen(method, getter, js_name = bytesWritten)]
     pub fn bytes_written(this: &WriteStream) -> f64;
 
     #[wasm_bindgen(method, getter)]

@@ -8,10 +8,10 @@ extern {
     #[derive(Clone, Debug)]
     pub type Timeout;
 
-    #[wasm_bindgen(method, js_name = "hasRef")]
+    #[wasm_bindgen(method, js_name = hasRef)]
     pub fn has_ref(this: &Timeout) -> bool;
 
-    #[wasm_bindgen(method, js_name = "ref")]
+    #[wasm_bindgen(method, js_name = ref)]
     pub fn ref_(this: &Timeout) -> Timeout;
 
     #[wasm_bindgen(method)]

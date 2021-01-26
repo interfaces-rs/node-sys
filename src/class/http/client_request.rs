@@ -25,16 +25,16 @@ extern {
         callback: Option<&Function>,
     ) -> ClientRequest;
 
-    #[wasm_bindgen(method, js_name = "flushHeaders")]
+    #[wasm_bindgen(method, js_name = flushHeaders)]
     pub fn flush_headers(this: &ClientRequest);
 
-    #[wasm_bindgen(method, js_name = "getHeader")]
+    #[wasm_bindgen(method, js_name = getHeader)]
     pub fn get_header(this: &ClientRequest, name: &JsString) -> JsValue;
 
-    #[wasm_bindgen(method, js_name = "removeHeader")]
+    #[wasm_bindgen(method, js_name = removeHeader)]
     pub fn remove_header(this: &ClientRequest, name: &JsString);
 
-    #[wasm_bindgen(method, js_name = "setHeader")]
+    #[wasm_bindgen(method, js_name = setHeader)]
     pub fn set_header(this: &ClientRequest, name: &JsString, value: &JsValue);
 
     #[wasm_bindgen(method)]

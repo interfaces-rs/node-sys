@@ -10,16 +10,16 @@ extern {
     #[derive(Clone, Debug)]
     pub type Cipher;
 
-    #[wasm_bindgen(method, js_name = "final")]
+    #[wasm_bindgen(method, js_name = final)]
     pub fn final_(this: &Cipher, output_encoding: Option<&str>) -> JsValue;
 
-    #[wasm_bindgen(method, js_name = "setAAD")]
+    #[wasm_bindgen(method, js_name = setAAD)]
     pub fn set_aad(this: &Cipher, buffer: &JsValue, options: Option<SetAadOptions>) -> Cipher;
 
-    #[wasm_bindgen(method, js_name = "getAuthTag")]
+    #[wasm_bindgen(method, js_name = getAuthTag)]
     pub fn get_auth_tag(this: &Cipher) -> Buffer;
 
-    #[wasm_bindgen(method, js_name = "getAutoPadding")]
+    #[wasm_bindgen(method, js_name = getAutoPadding)]
     pub fn get_auto_padding(this: &Cipher, auto_padding: Option<bool>) -> Cipher;
 
     #[wasm_bindgen(method)]

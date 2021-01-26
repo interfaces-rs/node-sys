@@ -17,13 +17,13 @@ extern {
     #[wasm_bindgen(method)]
     pub fn close(this: &Dir, callback: Option<&Function>) -> Promise;
 
-    #[wasm_bindgen(method, js_name = "closeSync")]
+    #[wasm_bindgen(method, js_name = closeSync)]
     pub fn close_sync(this: &Dir);
 
     #[wasm_bindgen(method)]
     pub fn read(this: &Dir) -> Promise;
 
-    #[wasm_bindgen(method, js_name = "readSync")]
+    #[wasm_bindgen(method, js_name = readSync)]
     pub fn read_sync(this: &Dir) -> Dirent;
 
     //*********************//

@@ -13,25 +13,25 @@ extern {
     // Instance Methods //
     //******************//
 
-    #[wasm_bindgen(method, js_name = "isFile")]
+    #[wasm_bindgen(method, js_name = isFile)]
     pub fn is_file(this: &Dirent) -> bool;
 
-    #[wasm_bindgen(method, js_name = "isDirectory")]
+    #[wasm_bindgen(method, js_name = isDirectory)]
     pub fn is_directory(this: &Dirent) -> bool;
 
-    #[wasm_bindgen(method, js_name = "isBlockDevice")]
+    #[wasm_bindgen(method, js_name = isBlockDevice)]
     pub fn is_block_device(this: &Dirent) -> bool;
 
-    #[wasm_bindgen(method, js_name = "isCharacterDevice")]
+    #[wasm_bindgen(method, js_name = isCharacterDevice)]
     pub fn is_character_device(this: &Dirent) -> bool;
 
-    #[wasm_bindgen(method, js_name = "isSymbolic")]
+    #[wasm_bindgen(method, js_name = isSymbolic)]
     pub fn is_symbolic_link(this: &Dirent) -> bool;
 
-    #[wasm_bindgen(method, js_name = "isFIFO")]
+    #[wasm_bindgen(method, js_name = isFIFO)]
     pub fn is_fifo(this: &Dirent) -> bool;
 
-    #[wasm_bindgen(method, js_name = "isSocket")]
+    #[wasm_bindgen(method, js_name = isSocket)]
     pub fn is_socket(this: &Dirent) -> bool;
 
     //*********************//

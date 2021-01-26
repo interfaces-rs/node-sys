@@ -30,7 +30,7 @@ impl SetAadOptions {
         self.flush = value;
     }
 
-    #[wasm_bindgen(getter, js_name = "plaintextLength")]
+    #[wasm_bindgen(getter, js_name = plaintextLength)]
     pub fn plaintext_length(&self) -> f64 {
         self.plaintext_length
     }

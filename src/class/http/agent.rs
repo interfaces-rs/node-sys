@@ -19,32 +19,32 @@ extern {
     //******************//
 
     // FIXME: options type
-    #[wasm_bindgen(method, js_name = "createConnection")]
+    #[wasm_bindgen(method, js_name = createConnection)]
     pub fn create_connection(this: &Agent, options: &Object, callback: Option<&Function>) -> stream::Duplex;
 
-    #[wasm_bindgen(method, js_name = "keepAliveSocket")]
+    #[wasm_bindgen(method, js_name = keepAliveSocket)]
     pub fn keep_alive_socket(this: &Agent, socket: &stream::Duplex);
 
-    #[wasm_bindgen(method, js_name = "reuseSocket")]
+    #[wasm_bindgen(method, js_name = reuseSocket)]
     pub fn reuse_socket(this: &Agent, socket: &stream::Duplex, request: &http::ClientRequest);
 
     #[wasm_bindgen(method)]
     pub fn destroy(this: &Agent);
 
-    #[wasm_bindgen(method, js_name = "getName")]
+    #[wasm_bindgen(method, js_name = getName)]
     pub fn get_name(this: &Agent, options: GetNameOptions);
 
     //*********************//
     // Instance Properties //
     //*********************//
 
-    #[wasm_bindgen(method, getter, js_name = "freeSockets")]
+    #[wasm_bindgen(method, getter, js_name = freeSockets)]
     pub fn free_sockets(this: &Agent);
 
-    #[wasm_bindgen(method, getter, js_name = "maxFreeSockets")]
+    #[wasm_bindgen(method, getter, js_name = maxFreeSockets)]
     pub fn max_free_sockets(this: &Agent);
 
-    #[wasm_bindgen(method, getter, js_name = "maxSockets")]
+    #[wasm_bindgen(method, getter, js_name = maxSockets)]
     pub fn max_sockets(this: &Agent);
 
     #[wasm_bindgen(method, getter)]

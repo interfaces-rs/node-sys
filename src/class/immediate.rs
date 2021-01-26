@@ -7,10 +7,10 @@ extern {
     #[derive(Clone, Debug)]
     pub type Immediate;
 
-    #[wasm_bindgen(method, js_name = "hasRef")]
+    #[wasm_bindgen(method, js_name = hasRef)]
     pub fn has_ref(this: &Immediate) -> bool;
 
-    #[wasm_bindgen(method, js_name = "ref")]
+    #[wasm_bindgen(method, js_name = ref)]
     pub fn ref_(this: &Immediate) -> Immediate;
 
     #[wasm_bindgen(method)]

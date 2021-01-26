@@ -12,7 +12,7 @@ extern {
     // Instance Methods //
     //******************//
 
-    #[wasm_bindgen(method, getter, js_name = "bytesRead")]
+    #[wasm_bindgen(method, getter, js_name = bytesRead)]
     pub fn bytes_read(this: &ReadStream) -> f64;
 
     #[wasm_bindgen(method, getter)]

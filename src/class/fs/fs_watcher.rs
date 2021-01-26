@@ -3,7 +3,7 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen(module = "fs")]
 extern {
-    #[wasm_bindgen(extends = Object, js_name = "FSWatcher")]
+    #[wasm_bindgen(extends = Object, js_name = FSWatcher)]
     #[derive(Clone, Debug)]
     pub type FsWatcher;
 
