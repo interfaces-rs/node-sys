@@ -51,5 +51,5 @@ extern {
     #[wasm_bindgen(method, getter)]
     pub fn readable(this: &ReadableStream) -> bool;
 
-// FIXME: async iterator
+    // FIXME: async iterator
 }
