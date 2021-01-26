@@ -1,10 +1,10 @@
-use crate::interface::ReadableStream;
+use crate::class;
 use js_sys::Function;
 use wasm_bindgen::{prelude::*, JsCast};
 
 #[wasm_bindgen(module = "fs")]
 extern {
-    #[wasm_bindgen(extends = ReadableStream)]
+    #[wasm_bindgen(extends = class::stream::Readable)]
     #[derive(Clone, Debug)]
     pub type ReadStream;
 

@@ -1,9 +1,9 @@
-use crate::interface::ReadWriteStream;
+use crate::class;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 extern {
-    #[wasm_bindgen(extends = ReadWriteStream)]
+    #[wasm_bindgen(extends = class::stream::Duplex)]
     pub type Socket;
 
     #[wasm_bindgen(method, getter, js_name = isTTY)]

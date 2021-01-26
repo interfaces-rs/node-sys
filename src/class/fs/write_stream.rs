@@ -1,10 +1,10 @@
-use crate::interface::WritableStream;
+use crate::class;
 use js_sys::Function;
 use wasm_bindgen::{prelude::*, JsCast};
 
 #[wasm_bindgen(module = "fs")]
 extern {
-    #[wasm_bindgen(extends = WritableStream)]
+    #[wasm_bindgen(extends = class::stream::Writable)]
     #[derive(Clone, Debug)]
     pub type WriteStream;
 
