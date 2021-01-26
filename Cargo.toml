@@ -2,7 +2,7 @@
 edition = "2018"
 name = "node-sys"
 version = "0.4.2"
-authors = ["Darin Morrison <darinmorrison@users.noreply.github.com>"]
+authors = ["hvithrafn <hvithrafn@users.noreply.github.com>"]
 license = "Apache-2.0 OR MIT"
 readme = "README.md"
 categories = ["wasm"]
