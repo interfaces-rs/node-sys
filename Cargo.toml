@@ -20,21 +20,15 @@ doctest = false
 test = false
 
 [dependencies]
-cfg-if = "^0.1.10"
-serde = "^1.0.102"
-
-[dependencies.js-sys]
-version = "^0.3.39"
-features = []
+cfg-if = "1.0"
+js-sys = "0.3"
+serde = "1.0"
+wasm-bindgen = { version = "=0.2.70", features = ["strict-macro"] }
 
 [dependencies.web-sys]
-version = "^0.3.39"
+version = "0.3"
 features = []
 
-[dependencies.wasm-bindgen]
-version = "^0.2.62"
-features = ["strict-macro"]
-
 [dev-dependencies]
-wasm-bindgen-futures = "^0.4.12"
-wasm-bindgen-test = "^0.3.12"
+wasm-bindgen-futures = "0.4"
+wasm-bindgen-test = "0.3"
