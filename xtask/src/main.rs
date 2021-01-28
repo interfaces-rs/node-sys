@@ -120,7 +120,9 @@ FLAGS:
             let cargo = metadata::cargo()?;
             let mut cmd = Command::new(cargo);
             cmd.current_dir(metadata::project_root());
-            cmd.args(&["build", "--package", "node-sys"]);
+            cmd.args(&["build"]);
+            cmd.args(&["--package", "node-sys"]);
+            cmd.args(&["--target", "wasm32-unknown-unknown"]);
             cmd.args(cargo_args);
             cmd.status()?;
 
