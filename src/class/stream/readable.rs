@@ -1,8 +1,8 @@
 use crate::{
-    class::{stream, EventEmitter},
+    class::{self, EventEmitter},
     interface::PipeOptions,
 };
-use js_sys::AsyncIterator;
+use js_sys::{AsyncIterator, Number};
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
@@ -22,7 +22,7 @@ extern {
     pub fn pause(this: &Readable) -> Readable;
 
     #[wasm_bindgen(method)]
-    pub fn pipe(this: &Readable, dest: &stream::Writable, opts: PipeOptions) -> bool;
+    pub fn pipe(this: &Readable, dest: &class::stream::Writable, opts: PipeOptions) -> bool;
 
     #[wasm_bindgen(method)]
     pub fn read(this: &Readable, size: Option<Number>) -> JsValue;
