@@ -25,7 +25,7 @@ extern {
     pub fn pipe(this: &Readable, dest: &stream::Writable, opts: PipeOptions) -> bool;
 
     #[wasm_bindgen(method)]
-    pub fn read(this: &Readable) -> bool;
+    pub fn read(this: &Readable, size: Option<Number>) -> JsValue;
 
     #[wasm_bindgen(method)]
     pub fn resume(this: &Readable) -> bool;
