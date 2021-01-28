@@ -246,6 +246,21 @@ fn set_uid() {
 }
 
 #[wasm_bindgen_test]
+fn stderr() {
+    process.stderr();
+}
+
+#[wasm_bindgen_test]
+fn stdin() {
+    process.stdin();
+}
+
+#[wasm_bindgen_test]
+fn stdout() {
+    process.stdout();
+}
+
+#[wasm_bindgen_test]
 fn uptime() {
     process.uptime();
 }
