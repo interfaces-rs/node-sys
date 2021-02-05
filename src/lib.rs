@@ -8,6 +8,6 @@ pub mod globals;
 pub(crate) mod interface;
 pub(crate) mod module;
 
-pub use class::{Buffer, EventEmitter, Immediate, Timeout, Wasi};
+pub use class::{stream, Buffer, EventEmitter, Immediate, Timeout, Wasi};
 pub use interface::*;
 pub use module::*;

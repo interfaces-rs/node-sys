@@ -12,7 +12,7 @@ pub(crate) mod inspector;
 pub(crate) mod perf_hooks;
 pub(crate) mod readline;
 pub(crate) mod repl;
-pub(crate) mod stream;
+pub mod stream;
 pub(crate) mod string_decoder;
 pub(crate) mod timeout;
 pub(crate) mod tls;
