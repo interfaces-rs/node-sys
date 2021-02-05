@@ -27,6 +27,7 @@ wasm-bindgen = { version = "=0.2.70", features = ["strict-macro"] }
 wasm-bindgen-futures = "0.4"
 
 [dev-dependencies]
+futures-util = { version = "0.3", features = ["io"] }
 wasm-bindgen-futures = "0.4"
 wasm-bindgen-test = "0.3"
 
