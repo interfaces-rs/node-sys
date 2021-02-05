@@ -7,7 +7,7 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 extern {
-    #[wasm_bindgen(extends = EventEmitter, extends = AsyncIterator)]
+    #[wasm_bindgen(extends = EventEmitter)]
     #[derive(Clone, Debug)]
     pub type Readable;
 
@@ -51,4 +51,16 @@ extern {
 
     #[wasm_bindgen(method, getter)]
     pub fn readable(this: &Readable) -> bool;
+}
+
+#[wasm_bindgen(module = "src/class/stream/readable.js")]
+extern {
+    #[wasm_bindgen(js_name = createAsyncIterable)]
+    fn create_async_iterable(readable: Readable) -> AsyncIterator;
+}
+
+impl From<Readable> for AsyncIterator {
+    fn from(readable: Readable) -> Self {
+        create_async_iterable(readable)
+    }
 }
