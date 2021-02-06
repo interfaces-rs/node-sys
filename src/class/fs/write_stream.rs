@@ -1,10 +1,26 @@
-use crate::class;
-use js_sys::Function;
+use crate::{stream, CreateWriteStreamOptions};
+use js_sys::{Function, JsString};
 use wasm_bindgen::{prelude::*, JsCast};
+use web_sys::Url;
 
 #[wasm_bindgen(module = "fs")]
 extern {
-    #[wasm_bindgen(extends = class::stream::Writable)]
+    #[wasm_bindgen(js_name = createWriteStream)]
+    pub fn create_write_stream_with_string(path: &JsString, options: Option<&CreateWriteStreamOptions>) -> WriteStream;
+
+    #[wasm_bindgen(js_name = createWriteStream)]
+    pub fn create_write_stream_with_url(url: &Url, options: Option<&CreateWriteStreamOptions>) -> WriteStream;
+
+    #[wasm_bindgen(js_name = unlinkSync)]
+    pub fn unlink_sync_path(path: &JsString);
+
+    #[wasm_bindgen(js_name = unlinkSync)]
+    pub fn unlink_sync_url(url: &Url);
+}
+
+#[wasm_bindgen(module = "fs")]
+extern {
+    #[wasm_bindgen(extends = stream::Writable)]
     #[derive(Clone, Debug)]
     pub type WriteStream;
 
