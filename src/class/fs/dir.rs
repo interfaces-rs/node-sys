@@ -1,4 +1,4 @@
-use crate::class::fs::Dirent;
+use crate::fs::Dirent;
 use js_sys::{AsyncIterator, Function, JsString, Object, Promise};
 use wasm_bindgen::prelude::*;
 
