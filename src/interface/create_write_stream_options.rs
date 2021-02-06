@@ -1,108 +1,73 @@
-use js_sys::JsString;
+use js_sys::Object;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-#[derive(Clone, Debug, Default, PartialEq)]
-pub struct CreateWriteStreamOptions {
-    auto_close: Option<bool>,
-    emit_close: Option<bool>,
-    encoding: Option<JsString>,
-    fd: Option<u32>,
-    flags: Option<JsString>,
-    mode: Option<u32>,
-    start: Option<f64>,
-}
+extern {
+    #[wasm_bindgen(extends = Object)]
+    #[derive(Clone, Debug)]
+    pub type CreateWriteStreamOptions;
 
-#[wasm_bindgen]
-impl CreateWriteStreamOptions {
-    #[wasm_bindgen(constructor)]
-    pub fn new_with_values(
-        auto_close: Option<bool>,
-        emit_close: Option<bool>,
-        encoding: Option<JsString>,
-        fd: Option<u32>,
-        flags: Option<JsString>,
-        mode: Option<u32>,
-        start: Option<f64>,
-    ) -> CreateWriteStreamOptions {
-        CreateWriteStreamOptions {
-            auto_close,
-            emit_close,
-            encoding,
-            fd,
-            flags,
-            mode,
-            start,
-        }
-    }
+    // autoClose
 
-    #[wasm_bindgen(getter)]
-    pub fn auto_close(&self) -> Option<bool> {
-        self.auto_close
-    }
+    #[wasm_bindgen(method, getter, js_name = autoClose)]
+    pub fn auto_close(this: &CreateWriteStreamOptions) -> bool;
 
-    #[wasm_bindgen(setter)]
-    pub fn set_auto_close(&mut self, value: Option<bool>) {
-        self.auto_close = value;
-    }
+    #[wasm_bindgen(method, setter, js_name = autoClose)]
+    pub fn set_auto_close(this: &CreateWriteStreamOptions, value: bool);
 
-    #[wasm_bindgen(getter)]
-    pub fn emit_close(&self) -> Option<bool> {
-        self.emit_close
-    }
+    // emitClose
 
-    #[wasm_bindgen(setter)]
-    pub fn set_emit_close(&mut self, value: Option<bool>) {
-        self.emit_close = value;
-    }
+    #[wasm_bindgen(method, getter, js_name = emitClose)]
+    pub fn emit_close(this: &CreateWriteStreamOptions) -> bool;
 
-    #[wasm_bindgen(getter)]
-    pub fn encoding(&self) -> Option<JsString> {
-        self.encoding.clone()
-    }
+    #[wasm_bindgen(method, setter, js_name = emitClose)]
+    pub fn set_emit_close(this: &CreateWriteStreamOptions, value: bool);
 
-    #[wasm_bindgen(setter)]
-    pub fn set_encoding(&mut self, value: Option<JsString>) {
-        self.encoding = value;
-    }
+    // encoding
 
-    #[wasm_bindgen(getter)]
-    pub fn fd(&self) -> Option<u32> {
-        self.fd
-    }
+    #[wasm_bindgen(method, getter, js_name = encoding)]
+    pub fn encoding(this: &CreateWriteStreamOptions) -> String;
 
-    #[wasm_bindgen(setter)]
-    pub fn set_fd(&mut self, value: Option<u32>) {
-        self.fd = value;
-    }
+    #[wasm_bindgen(method, setter, js_name = encoding)]
+    pub fn set_encoding(this: &CreateWriteStreamOptions, value: &str);
 
-    #[wasm_bindgen(getter)]
-    pub fn flags(&self) -> Option<JsString> {
-        self.flags.clone()
-    }
+    // fd
 
-    #[wasm_bindgen(setter)]
-    pub fn set_flags(&mut self, value: Option<JsString>) {
-        self.flags = value;
-    }
+    #[wasm_bindgen(method, getter, js_name = fd)]
+    pub fn fd(this: &CreateWriteStreamOptions) -> JsValue;
 
-    #[wasm_bindgen(getter)]
-    pub fn mode(&self) -> Option<u32> {
-        self.mode
-    }
+    #[wasm_bindgen(method, setter, js_name = fd)]
+    pub fn set_fd(this: &CreateWriteStreamOptions, value: &JsValue);
 
-    #[wasm_bindgen(setter)]
-    pub fn set_mode(&mut self, value: Option<u32>) {
-        self.mode = value;
-    }
+    // flags
 
-    #[wasm_bindgen(getter)]
-    pub fn start(&self) -> Option<f64> {
-        self.start
-    }
+    #[wasm_bindgen(method, getter, js_name = flags)]
+    pub fn flags(this: &CreateWriteStreamOptions) -> String;
 
-    #[wasm_bindgen(setter)]
-    pub fn set_start(&mut self, value: Option<f64>) {
-        self.start = value;
-    }
+    #[wasm_bindgen(method, setter, js_name = flags)]
+    pub fn set_flags(this: &CreateWriteStreamOptions, value: &str);
+
+    // fs
+
+    #[wasm_bindgen(method, getter, js_name = fs)]
+    pub fn fs(this: &CreateWriteStreamOptions) -> JsValue;
+
+    #[wasm_bindgen(method, setter, js_name = fs)]
+    pub fn set_fs(this: &CreateWriteStreamOptions, value: &JsValue);
+
+    // mode
+
+    #[wasm_bindgen(method, getter, js_name = mode)]
+    pub fn mode(this: &CreateWriteStreamOptions) -> u32;
+
+    #[wasm_bindgen(method, setter, js_name = mode)]
+    pub fn set_mode(this: &CreateWriteStreamOptions, value: u32);
+
+    // start
+
+    #[wasm_bindgen(method, getter, js_name = start)]
+    pub fn start(this: &CreateWriteStreamOptions) -> u32;
+
+    #[wasm_bindgen(method, setter, js_name = start)]
+    pub fn set_start(this: &CreateWriteStreamOptions, value: u32);
 }
