@@ -1,3 +1,4 @@
+pub(crate) mod abort_signal;
 pub(crate) mod buffer;
 pub(crate) mod console;
 pub(crate) mod crypto;
@@ -26,6 +27,7 @@ pub(crate) mod web_assembly;
 pub(crate) mod worker_threads;
 pub(crate) mod zlib;
 
+pub use abort_signal::*;
 pub use buffer::*;
 pub use console::*;
 pub use event_emitter::*;
