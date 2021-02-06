@@ -107,6 +107,12 @@ pub struct JsAsyncWrite {
 }
 
 impl JsAsyncWrite {
+    pub fn new(inner: Writable) -> Self {
+        let close = Default::default();
+        let write = Default::default();
+        Self { inner, close, write }
+    }
+
     fn poll_close(self: Pin<&mut Self>, cx: &mut Context) -> Result<Poll<std::io::Result<()>>, JsValue> {
         let this = self.get_mut();
         if let Some(future) = &mut this.close {
@@ -151,9 +157,7 @@ impl JsAsyncWrite {
 
 impl From<Writable> for JsAsyncWrite {
     fn from(inner: Writable) -> Self {
-        let close = Default::default();
-        let write = Default::default();
-        Self { inner, close, write }
+        Self::new(inner)
     }
 }
 
