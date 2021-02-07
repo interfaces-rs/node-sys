@@ -14,11 +14,6 @@ Raw bindings to the Node.js API for projects using wasm-bindgen.
 [badges]
 maintenance = { status = "experimental" }
 
-[lib]
-crate-type = ["cdylib", "rlib"]
-doctest = false
-test = false
-
 [dependencies]
 cfg-if = "1.0"
 futures-core = "0.3"
